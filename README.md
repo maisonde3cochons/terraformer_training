@@ -1,4 +1,28 @@
 
+### 예시
+
+```
+terraformer import aws --resources=vpc,subnet,route_table,igw,sg,nat  --path-pattern="{output}/" --connect=true --regions=ap-northeast-2 --profile=default
+```
+
+### --resource tag not found 에러 발생 시 
+```
+rm -rf {terraformer 설치 위치}
+후 재설치
+```
+
+###  exec: no command 에러 발생 시 
+```
+# 아래 path로 이동
+~/.terraform.d/plugins/linux_amd64 
+
+# terraform provider를 아래 사이트에서 다운로드 
+https://releases.hashicorp.com/terraform-provider-aws
+
+# WSL 환경일 경우 아래 파일 다운로드 후 압축 해제
+terraform-provider-aws_4.57.1_linux_amd64.zip
+```
+
 ### Use with AWS Terraformer 사용 시 resource 선택 참고
 
 Example:
